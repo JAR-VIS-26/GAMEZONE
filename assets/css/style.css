@@ -1,0 +1,293 @@
+/* =====================================
+   GAMEZONE - ESTILOS GENERALES
+===================================== */
+
+/* Colores principales */
+:root {
+    --color-fondo: #10111b;
+    --color-secundario: #191b2b;
+    --color-tarjeta: #202238;
+    --color-morado: #8b5cf6;
+    --color-morado-hover: #7541df;
+    --color-texto: #ffffff;
+    --color-texto-secundario: #b7b8ca;
+    --color-borde: #34364d;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-texto);
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   BARRA DE NAVEGACIÓN
+===================================== */
+
+.navbar-gamezone {
+    background-color: #191a2a;
+    border-bottom: 1px solid var(--color-borde);
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    color: var(--color-morado) !important;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.navbar-gamezone .nav-link {
+    color: var(--color-texto-secundario);
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar-gamezone .nav-link:hover {
+    color: var(--color-morado);
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.btn-purple {
+    background-color: var(--color-morado);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-purple:hover {
+    background-color: var(--color-morado-hover);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+}
+
+/* =====================================
+   TEXTOS Y COLORES
+===================================== */
+
+.text-purple {
+    color: var(--color-morado) !important;
+}
+
+.muted {
+    color: var(--color-texto-secundario);
+}
+
+/* =====================================
+   SECCIÓN PRINCIPAL / HERO
+===================================== */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #191a2a,
+        #282044
+    );
+    padding: 90px 0;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* =====================================
+   TARJETAS GENERALES
+===================================== */
+
+.game-card {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-morado);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+.game-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.game-card .card-body {
+    padding: 20px;
+}
+
+.game-card h5 {
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   FORMULARIOS
+===================================== */
+
+.form-panel {
+    background-color: var(--color-secundario);
+    padding: 35px;
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+}
+
+.form-control,
+.form-select {
+    background-color: #25273b;
+    border: 1px solid var(--color-borde);
+    color: white;
+    padding: 11px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #25273b;
+    border-color: var(--color-morado);
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.2);
+}
+
+.form-control::placeholder {
+    color: #999bb0;
+}
+
+.form-select option {
+    background-color: #25273b;
+    color: white;
+}
+
+.form-label {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+/* =====================================
+   DETALLE DE VIDEOJUEGO
+===================================== */
+
+.game-cover {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid var(--color-borde);
+}
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+#busqueda {
+    border-radius: 8px;
+}
+
+#filtroGenero {
+    border-radius: 8px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.footer-gamezone {
+    background-color: #191a2a;
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-texto-secundario);
+    margin-top: 60px;
+}
+
+.footer-gamezone h5 {
+    color: var(--color-morado);
+}
+
+/* =====================================
+   RESPONSIVE - TABLETS
+===================================== */
+
+@media (max-width: 991px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
+
+/* =====================================
+   RESPONSIVE - CELULARES
+===================================== */
+
+@media (max-width: 576px) {
+
+    .hero {
+        padding: 45px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .form-panel {
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .game-card img {
+        height: 190px;
+    }
+
+}
